@@ -1,0 +1,16 @@
+<md-card>
+  <form (ngSubmit)="onSubmit()" #searchForm="ngForm">
+    <md-card-title>Enter search criteria:</md-card-title>
+    <md-card-content>
+      <md-input required class="search-criteria"
+                [(ngModel)]="model.criteria" name="criteria">
+      </md-input>
+    </md-card-content>
+    <md-card-actions>
+      <button md-raised-button class="md-primary" type="submit"
+              [disabled]="!searchForm.form.valid">
+              Search
+      </button>
+    </md-card-actions>
+  </form>
+</md-card>
